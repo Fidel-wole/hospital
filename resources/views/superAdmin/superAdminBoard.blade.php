@@ -11,87 +11,9 @@
 </head>
 
 <body>
-    <section class="header">
-        <div class="logo">
-            <i class="ri-menu-line icon icon-0 menu"></i>
-            <h2>Med<span>Ex</span></h2>
-        </div>
-        <div class="search--notification--profile">
-            <div class="search">
-                <input type="text" placeholder="Search Scdule..">
-                <button><i class="ri-search-2-line"></i></button>
-            </div>
-            <div class="notification--profile">
-                <div class="picon lock">
-                    <i class="ri-lock-line"></i>
-                </div>
-                <div class="picon bell">
-                    <i class="ri-notification-2-line"></i>
-                </div>
-                <div class="picon chat">
-                    <i class="ri-wechat-2-line"></i>
-                </div>
-                <div class="picon profile">
-                    <img src="assets/profile.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
+@include('superAdmin/header');
     <section class="main">
-        <div class="sidebar">
-            <ul class="sidebar--items">
-                <li>
-                    <a href="#" id="active--link">
-                        <span class="icon icon-1"><i class="ri-layout-grid-line"></i></span>
-                        <span class="sidebar--item">Dashboard</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon icon-2"><i class="ri-calendar-2-line"></i></span>
-                        <span class="sidebar--item">Schedule</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon icon-3"><i class="ri-user-2-line"></i></span>
-                        <span class="sidebar--item" style="white-space: nowrap;">Reliable Doctor</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon icon-4"><i class="ri-user-line"></i></span>
-                        <span class="sidebar--item">Patients</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon icon-5"><i class="ri-line-chart-line"></i></span>
-                        <span class="sidebar--item">Activity</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon icon-6"><i class="ri-customer-service-line"></i></span>
-                        <span class="sidebar--item">Support</span>
-                    </a>
-                </li>
-            </ul>
-            <ul class="sidebar--bottom-items">
-                <li>
-                    <a href="#">
-                        <span class="icon icon-7"><i class="ri-settings-3-line"></i></span>
-                        <span class="sidebar--item">Settings</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon icon-8"><i class="ri-logout-box-r-line"></i></span>
-                        <span class="sidebar--item">Logout</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+@include('superAdmin/navbar')
         <div class="main--content">
             <div class="overview">
                 <div class="title">
@@ -304,6 +226,80 @@
                     </table>
                 </div>
             </div>
+            <form action="" method="POST" class="the-form" encType="multipart/form-data">
+                @csrf
+                <div class="div">
+        <p class="cancel">&times;</p>
+                
+                <label htmlFor="firstname">Firstname</label>
+                <input type="text" name="firstname" id="firstname" placeholder="Enter your firstname">
+                <span>
+                    @error('firstname')
+                        {{ $message }}
+                    @enderror
+                </span>
+                <label htmlFor="middlename">Middlename</label>
+                <input type="text" name="middlename" id="middlename" placeholder="Enter your middlename">
+                <span>
+                    @error('middlename')
+                        {{ $message }}
+                    @enderror
+                </span>
+                <label htmlFor="lastname">Lastname</label>
+
+                <input type="text" name="lastname" id="lastname" />
+                <span>
+                    @error('lastname')
+                        {{ $message }}
+                    @enderror
+                </span>
+                <label htmlFor="email">Email</label>
+                <input type="email" name="email" id="email" autoComplete="email">
+                <span>
+                    @error('email')
+                        {{ $message }}
+                    @enderror
+                </span>
+                <label htmlFor="number">Phone number</label>
+                <input type="number" name="phone_number" id="phone_number">
+                <span>
+                    @error('phone number')
+                        {{ $message }}
+                    @enderror
+                </span>
+                <label htmlFor="address">Address</label>
+                <input type="text" name="address" id="address" placeholder="Enter your address">
+                <span>
+                    @error('address')
+                        {{ $message }}
+                    @enderror
+                </span>
+                <label>Gender</label>
+
+                <select name="sex">
+                    <option value="male" name="sex">Male</option>
+                    <option value="female" name="sex">Female</option>
+                    <option value="others" name="sex">Others</option>
+                </select>
+                <span>
+                    @error('sex')
+                        {{ $message }}
+                    @enderror
+                </span>
+                <label htmlFor="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your Password">
+                <span>
+                    @error('password')
+                        {{ $message }}
+                    @enderror
+                </span>
+                <label htmlFor="confirmPassword">Password</label>
+                <input type="password" name="password_confirmation" id="confirmPassword"
+                    placeholder="Enter your Password">
+
+                <input type="submit" value="Sign In" />
+                </div>
+            </form>
         </div>
     </section>
     <script src="js/admins.js"></script>

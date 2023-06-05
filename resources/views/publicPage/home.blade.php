@@ -57,7 +57,7 @@
                         <a href="">
                             <li>Blog</li>
                         </a>
-                        <a href="">
+                        <a href="/login">
                             <li>Log in</li>
                         </a>
 

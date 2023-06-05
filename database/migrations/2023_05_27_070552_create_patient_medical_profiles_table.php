@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('patient_medical_profiles', function (Blueprint $table) {
             $table->id();
+            $table->string('fullname');
+            $table->unsignedBigInteger('patient_id');
+            $table->foreign('patient_id')->references('patient_id')->on('patients');
+            $table->string('hereditary')->nullable();
+            $table->string('genotype');
+            $table->string('blood_group');
+            $table->string('height');
+            $table->string('weight');
+            $table->string('allergies')->nullable();
             $table->timestamps();
         });
     }
