@@ -12,6 +12,9 @@ body {
     width: 100%;
     text-decoration: none;
 }
+p{
+    padding: 5px;
+}
 a{
     text-decoration: none;
 }

@@ -33,7 +33,7 @@
                     <div class="cards">
                         <div class="card card-3">
                             <div class="card-data">
-                                <b>{{ auth()->user()->firstname }} <span>{{ auth()->user()->lastname }}</span></b>
+                                <b>{{ auth()->user()->fullname }}</b>
                                 <p>
                                 <p card--title>Email: {{ auth()->user()->email }}</p>
                                 <p card--title>Address: {{ auth()->user()->address }}</p>
@@ -44,11 +44,11 @@
                         <div class="card card-2">
                             <div class="card-data">
                                 <div class="card-content">
-                                    <h5 class="card--title">Blood group: O</h5>
+                                    <h5 class="card--title">Blood group: {{ $profile->blood_group }}</h5>
                                     <p>
-                                    <p card--title>Allergies: None</p>
-                                    <p card--title>Diseases: None</p>
-                                    <p card--title>Genotype: AA</p>
+                                    <p card--title>Allergies: {{ $profile->allergies }}</p>
+
+                                    <p card--title>Genotype: {{ $profile->genotype }}</p>
                                 </div>
 
                             </div>

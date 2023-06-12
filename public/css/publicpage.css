@@ -107,11 +107,11 @@ button {
 
 nav {
     width: 100vw;
-    height: 5rem;
+    height: 4rem;
     background: var(--white-color);
     display: flex;
     justify-content: space-around;
-
+      
     position: fixed;
     top: 0;
     left: 0;
@@ -169,6 +169,9 @@ nav {
 
 .book {
     display: flex;
+    margin-right:3rem ;
+    justify-content: space-between;
+    gap:1rem;
 }
 
 /* MEDIUM QUERIES(MEDIUM AND SMALL SCREEN) */

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminsController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PatientsController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,3 +35,4 @@ Route::get('/patients', [AdminsController::class, 'view_patients'] );
 Route::get('/patient_profile/{profile}', [AdminsController::class, 'view_patients_profile'] );
 Route::post('/signup', [AdminsController::class, 'register_patient']);
 Route::post('/login', [PatientsController::class, 'login']);
+Route::post('/register_doctor', [AuthController::class, 'register_doctor']);

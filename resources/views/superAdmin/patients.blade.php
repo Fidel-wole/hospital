@@ -31,7 +31,7 @@
                     <h2 class="section--title">Recent Patients</h2>
                     <button class="add"><i class="ri-add-line"></i>Add Doctor</button>
                 </div>
-                <div class="table">
+                <div class="table" style="height: 600px;">
                     <table>
                         <thead>
                             <tr>

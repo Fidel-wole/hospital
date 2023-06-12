@@ -378,6 +378,7 @@
         </div> --}}
     </section>
     <script src="js/admins.js"></script>
+    <script src="js/form.js"></script>
 </body>
 
 </html>
