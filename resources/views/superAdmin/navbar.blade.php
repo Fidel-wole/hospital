@@ -1,31 +1,31 @@
 <div class="sidebar">
     <ul class="sidebar--items">
         <li>
-            <a href="/" id="active--link">
+            <a href="/"  class="{{ Route::currentRouteName() == 'dashboard' ? 'active--link' : '' }}" >
                 <span class="icon icon-1"><i class="ri-layout-grid-line"></i></span>
                 <span class="sidebar--item">Dashboard</span>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="#"class="{{ Route::currentRouteName() == 'schedule' ? 'active--link' : '' }}" >
                 <span class="icon icon-2"><i class="ri-calendar-2-line"></i></span>
                 <span class="sidebar--item">Schedule</span>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="#" class="{{ Route::currentRouteName() == 'analytics' ? 'active--link' : '' }}" >
                 <span class="icon icon-3"><i class="ri-user-2-line"></i></span>
                 <span class="sidebar--item" style="white-space: nowrap;">Reliable Doctor</span>
             </a>
         </li>
         <li>
-            <a href="/patients">
+            <a href="/patients" class="{{ Route::currentRouteName() == 'patients' ? 'active--link' : '' }}" >
                 <span class="icon icon-4"><i class="ri-user-line"></i></span>
                 <span class="sidebar--item">Patients</span>
             </a>
         </li>
         <li>
-            <a href="/register_patient">
+            <a href="/register_patient" class="{{ Route::currentRouteName() == 'register_patient' ? 'active--link' : '' }}">
                 <span class="icon icon-4"><i class="ri-user-line"></i></span>
                 <span class="sidebar--item">Register patient</span>
             </a>

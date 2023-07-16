@@ -20,19 +20,19 @@ Route::get('/home', function () {
 });
 Route::get('/', function () {
     return view('superAdmin/superAdminBoard');
-});
+})->name('dashboard');
 Route::get('/services', function () {
     return view('publicPage/services');
 });
 Route::get('/register_patient', function () {
     return view('superAdmin/register_patient');
-});
+})->name('register_patient');
 
 Route::get('/login', function () {
     return view('publicPage/login');
 });
-Route::get('/patients', [AdminsController::class, 'view_patients'] );
-Route::get('/patient_profile/{profile}', [AdminsController::class, 'view_patients_profile'] );
+Route::get('/patients', [AdminsController::class, 'view_patients'] )->name('patients');
+Route::get('/patient_profile/{profile}', [AdminsController::class, 'view_patients_profile'] )->name('patients');
 Route::post('/signup', [AdminsController::class, 'register_patient']);
 Route::post('/login', [PatientsController::class, 'login']);
 Route::post('/register_doctor', [AuthController::class, 'register_doctor']);

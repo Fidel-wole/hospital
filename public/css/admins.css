@@ -178,7 +178,8 @@ a {
     color: #fff;
 }
 
-#active--link {
+
+.sidebar--items a.active--link {
     background-color: #5073fb;
     color: #fff;
 }
